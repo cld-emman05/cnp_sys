@@ -42,9 +42,11 @@
                                     </p>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <a class="dropdown-item" href="/customer">Customer</a>
+                                    <a class="dropdown-item" href="/agent">Sales Agent</a>
+                                    <a class="dropdown-item" href="/admin">Administrator</a>
+                                    <a class="dropdown-item" href="/pre-press">Pre-press</a>
+                                    <a class="dropdown-item" href="/purchasing">Purchasing</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
