@@ -15,7 +15,7 @@
 
         @elseif(Request::is('admin'))
           <a href= '#'> Juan Dela Cruz</a>
-          <small class = "simple-text logo-normal"> Admininstrator </small>
+          <small class = "simple-text logo-normal"> Administrator </small>
 
           @elseif(Request::is('pre-press'))
             <a href= '#'> Fernando Amorsolo</a>
@@ -103,19 +103,34 @@
                   <p>Add New Employees</p>
               </a>
           </li>
+			
+		  @elseif(Request::is('pre-press'))
+          <li>
+              <a href="">
+                  <i class="now-ui-icons education_atom"></i>
+                  <p>View Orders</p>
+              </a>
+          </li>
 
+          <li>
+              <a href="">
+                  <i class="now-ui-icons location_map-big"></i>
+                  <p>View Job Samples</p>
+              </a>
+          </li>
+		  
           @elseif(Request::is('purchasing'))
           <li>
-              <a href="/order/create">
+              <a href="/purchase/create">
                   <i class="now-ui-icons education_atom"></i>
-                  <p>Manage Quotations</p>
+                  <p>Purchase Supplies</p>
               </a>
           </li>
 
           <li>
               <a href="../examples/map.html">
                   <i class="now-ui-icons location_map-big"></i>
-                  <p>Add New Employees</p>
+                  <p>View Supplier Status</p>
               </a>
           </li>
 

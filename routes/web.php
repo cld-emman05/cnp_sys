@@ -11,6 +11,7 @@
 |
 */
 
+// User Dashviards
 Route::get('/customer', function () {
     return view('dashboard.customer');
 });
@@ -31,13 +32,25 @@ Route::get('/purchasing', function () {
     return view('dashboard.purchasing');
 });
 
-Route::get('/maps', function () {
-    return view('maps');
-});
+// Orders Function
 
 Route::get('/order/create', function () {
     return view('order.create');
 });
+
+//Quotations Function
+
+Route::get('/quotation/create', function () {
+    return view('quotation.create');
+});
+
+//Purchase Function
+
+Route::get('/purchase/create', function () {
+    return view('purchase.create');
+});
+
+// About Functions
 
 Route::get('/about-us', function () {
     return view('about.contact');

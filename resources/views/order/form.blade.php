@@ -29,7 +29,7 @@
 
 <div class= 'card-body'>
 <div class="header">
-<h4 class="title">Specifications</h4>
+<center><h2 class="title"> Specifications </h2>
 </div>
 <!-- FORM CONTENT -->
 <div class="content">
