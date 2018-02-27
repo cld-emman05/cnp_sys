@@ -30,9 +30,7 @@ $(document).ready(function(){
 
         var sum = parseInt(temp, 10) * parseInt(m, 10);
         var total = parseInt(sum, 10) * parseInt(l, 10);
-
-        $( "#UnitCost" ).prop( "readonly", false);
-        $('#TotalAll').prop( "readonly", false);
+        
         $('#post-quote').fadeIn(300);
 
         $('#UnitCost').attr('value',sum);

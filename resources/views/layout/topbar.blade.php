@@ -9,7 +9,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">@yield('title')</a>
+                        <a class="navbar-brand">@yield('title')</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -58,9 +58,21 @@
                                 </a>
                                 <div class = "dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                     <a class = 'dropdown-item' href = '#'> Profile </a>
-                                    <a class = 'dropdown-item' href = '#'> Account settings </a>
                                     <a class = 'dropdown-item' href = '#'> Logout </a>
+                                    <hr>
+                                  <div class="col-md-12 pr-1">
+                              			<div class="form-group">
+                                    {{ Form::label('user_name', 'Username') }}
+                      							{{ Form::text('User Name', '', ['class' => 'form-control border-input col-lg-6', 'placeholder' => 'username', 'id'=>'user_name'])}}
+                                  </div>
                                 </div>
+                                    <div class="col-md-12 pr-1">
+                                			<div class="form-group">
+                                    {{ Form::label('password', 'Password') }}
+                      							{{ Form::password('', ['class' => 'form-control border-input col-lg-6', 'placeholder' => 'password', 'id'=>'password'])}}
+                                </div>
+                              </div>
+                            </div>
                             </li>
                         </ul>
                     </div>
