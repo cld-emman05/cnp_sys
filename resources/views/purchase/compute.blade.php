@@ -48,9 +48,9 @@
                           <div class="col-md-6 pr-5">
                             <div class="form-group">
                               {{ Form::label('job_name', 'Job Type:') }}
-                              {{ Form::text('job_name', '', [
+                              {{ Form::text('job_name', 'Sample Job', [
                                 'class' => 'form-control border-input',
-                                'placeholder' => 'Enter'
+                                'readonly placeholder'
                               ])}}
                             </div>
                           </div>
@@ -60,11 +60,11 @@
                             <div class="form-group">
                               <!-- {{ Form::label('jobtype', 'Job Type') }}
                               {{ Form::text('jobtype', '', ['class' => 'form-control border-input', 'placeholder' => 'Enter','id'=>'jobtype'])}} -->
-                              {{ Form::label('jobtype', 'Job Type:') }}
-                              <select class="form-control" id="jobtype" name="jobtype">
-                              <option value="1"> -- </option>
-
-                              </select>
+                              {{ Form::label('job_type', 'Job Type:') }}
+															{{ Form::text('job_type', 'Yearbook', [
+                                'class' => 'form-control border-input',
+                                'readonly placeholder'
+                              ])}}
                             </div>
                           </div>
 
@@ -74,7 +74,10 @@
                           	{{ Form::label('quantity', 'Quantity') }}
                           		<div class="container">
                           			<div class="count-input space-bottom">
-                          			{{ Form::number('quantity', '1', ['class' => 'form-control border-input'])}}
+																	{{ Form::text('quantity', '1', [
+		                                'class' => 'form-control border-input',
+		                                'readonly placeholder'
+		                              ])}}
                           		</div>
                           	</div>
                           </div>
@@ -86,7 +89,10 @@
                           	{{ Form::label('page_count', 'Number of Pages') }}
                           		<div class="container">
                           			<div class="count-input space-bottom">
-                          			{{ Form::number('page_count', '1', ['class' => 'form-control border-input'])}}
+																	{{ Form::text('page_count', '1', [
+																		'class' => 'form-control border-input',
+																		'readonly placeholder'
+																	])}}
                           			</div>
                           		</div>
                           	</div>
@@ -96,9 +102,10 @@
                             <div class="form-group">
                             <!-- SIZE -->
                           	{{ Form::label('size', 'Size') }}
-                          	<select class="form-control" id="size" name="size">
-                          	<option value="1"> -- </option>
-                          	</select>
+														{{ Form::text('size', 'Letter', [
+															'class' => 'form-control border-input',
+															'readonly placeholder'
+														])}}
 
                             </div>
                           </div>
@@ -117,9 +124,10 @@
                             <div class="form-group">
                             <!-- COVER PAPER -->
                             {{ Form::label('cover_paper', 'Paper Type') }}
-                          	<select class="form-control" id="cover_paper" name="cover_paper">
-                          	<option value="1"> -- </option>
-                          	</select>
+														{{ Form::text('cover_paper', '--', [
+															'class' => 'form-control border-input',
+															'readonly placeholder'
+														])}}
                             </div>
                           </div>
 
@@ -127,10 +135,10 @@
                             <div class="form-group">
                             <!-- INSIDE PAPER -->
                           	{{ Form::label('cover_color', 'Paper Color') }}
-                          	<select class="form-control" id="cover_color" name="cover_color">
-                          	<option value="1"> Black and White </option>
-                          	<option value="2"> Colored </option>
-                          	</select>
+														{{ Form::text('cover_color', 'Full Color', [
+															'class' => 'form-control border-input',
+															'readonly placeholder'
+														])}}
                             </div>
                           </div>
                           </div>
@@ -146,9 +154,10 @@
                             <div class="form-group">
                             <!-- COVER PAPER -->
                             {{ Form::label('inside_paper', 'Paper Type') }}
-                          	<select class="form-control" id="cover_paper" name="cover_paper">
-                          	<option value="1"> -- </option>
-                          	</select>
+														{{ Form::text('inside_paper', '--', [
+															'class' => 'form-control border-input',
+															'readonly placeholder'
+														])}}
                           <br><br>
                             </div>
                           </div>
@@ -157,10 +166,10 @@
                             <div class="form-group">
                             <!-- INSIDE PAPER -->
                           	{{ Form::label('inside_color', 'Paper Color') }}
-                          	<select class="form-control" id="cover_color" name="cover_color">
-                          	<option value="1"> Black and White </option>
-                          	<option value="2"> Colored </option>
-                          	</select>
+														{{ Form::text('inside_color', 'Grayscale', [
+															'class' => 'form-control border-input',
+															'readonly placeholder'
+														])}}
                           <br><br>
                             </div>
                           </div>
@@ -172,7 +181,10 @@
                           {{ Form::label('supply_price', 'Amount (in PhP)') }}
                             <div class="container">
                               <div class="count-input space-bottom">
-                              {{ Form::text('supply_price', '', ['class' => 'form-control border-input'])}}
+																{{ Form::text('supply_price', '', [
+																	'class' => 'form-control border-input',
+																	'readonly placeholder'
+																])}}
                             </div>
                           </div>
                         </div>

@@ -1,12 +1,12 @@
 <nav>
                         <ul>
                             <li>
-                                <a href="https://www.creative-tim.com">
+                                <a href="/about-us">
                                     About us
                                 </a>
                             </li>
                             <li>
-                                <a href="/about-us">
+                                <a href="/contact-us">
                                     Contact Us
                                 </a>
                             </li>
@@ -17,5 +17,5 @@
                         <script>
                             document.write(new Date().getFullYear())
                         </script>
-                        <a href="#" target="_blank">Cover and Pages Corporation</a>
+                        <a href="#" target="_blank">Cover & Pages Corporation</a>
                     </div>

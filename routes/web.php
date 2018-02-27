@@ -38,10 +38,30 @@ Route::get('/order/create', function () {
     return view('order.create');
 });
 
+Route::get('/order/view', function () {
+    return view('order.view');
+});
+
+Route::get('/order/revise', function () {
+    return view('order.revise');
+});
+
+Route::get('/order/monitor-status', function () {
+    return view('order.monitor-status');
+});
+
+Route::get('/order/update-status', function () {
+    return view('order.update-status');
+});
+
 //Quotations Function
 
 Route::get('/quotation/create', function () {
     return view('quotation.create');
+});
+
+Route::get('/quotation/approve', function () {
+    return view('quotation.approve');
 });
 
 //Purchase Function
@@ -55,7 +75,14 @@ Route::get('/purchase/compute', function () {
 });
 
 // About Functions
-
 Route::get('/about-us', function () {
+  return view('about.info');
+});
+
+Route::get('/', function () {
+    return view('about.info');
+});
+
+Route::get('/contact-us', function () {
     return view('about.contact');
 });
