@@ -12,6 +12,7 @@
                             </li>
                         </ul>
                     </nav>
+
                     <div class="copyright">
                         &copy;
                         <script>

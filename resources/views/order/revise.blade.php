@@ -20,7 +20,7 @@
                       <div class="row">
                   			<div class="col-md-6 pr-5">
                   				<div class="form-group">
-                  					{{ Form::label('job_name', 'Job Type:') }}
+                  					{{ Form::label('job_name', 'Job Name') }}
                   					<input type = 'text' name = 'job_name' value = 'Sample Job'
                   						class = 'form-control border-input' readonly placeholder/>
                   				</div>
@@ -31,7 +31,7 @@
                   				<div class="form-group">
                   					<!-- {{ Form::label('jobtype', 'Job Type') }}
                   					{{ Form::text('jobtype', '', ['class' => 'form-control border-input', 'placeholder' => 'Enter','id'=>'jobtype'])}} -->
-                  					{{ Form::label('job_type', 'Job Type:') }}
+                  					{{ Form::label('job_type', 'Job Type') }}
 														<input type = 'text' name = 'job_type' value = 'Yearbook'
                   						class = 'form-control border-input' readonly placeholder/>
                   				</div>

@@ -13,11 +13,12 @@ class UserTypesTableSeeder extends Seeder
     public function run()
     {
         DB::table('user_types')->insert([
-          ['type' => 'Administrator'],
-          ['type' => 'Customer'],
-          ['type' => 'Sales Agent'],
-          ['type' => 'Pre-Press'],
-          ['type' => 'Purchasing']
+          ['type' => 'customer'],
+          ['type' => 'sales'],
+          ['type' => 'administrator'],
+          ['type' => 'pre-press'],
+          ['type' => 'purchasing'],
+          ['type' => 'finance']
         ]);
     }
 }

@@ -1,6 +1,6 @@
 @extends('layout.main')
 
-@section('title', "Approve Quotation")
+@section('title', "Manage Haggling Request")
 
 @include('headers.table')
 
@@ -10,7 +10,7 @@
       <div class="card card-chart">
           <div class="card-header">
           <h5 class='card-category'>Quotations</h5>
-            <h4 class="card-title">Approval</h4>
+            <h4 class="card-title">Haggle Requests</h4>
           </div>
 
           <!-- FORM CONTENT -->
@@ -22,7 +22,7 @@
       								<tr>
         								<th>Quote #</th>
         								<th>Job Title</th>
-        								<th>Agent</th>
+        								<th>Customer</th>
         								<th>Job Price</th>
         								<th>Confirm</th>
       								</tr>
@@ -35,8 +35,8 @@
         								<td><a>Crisostomo Ibarra</a></td>
         								<td><a>PhP 30.00</a></td>
         								<td>
-        									<btn class = 'btn btn-success'>Approve</btn>
-        									<btn class = 'btn btn-danger'>Reject ()</btn>
+        									<btn class = 'btn btn-warning'>Update</btn>
+        									<btn class = 'btn btn-danger'>Deny</btn>
         								</td>
       								</tr>
     								</tbody>

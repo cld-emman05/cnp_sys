@@ -20,3 +20,14 @@
 
 		<link href="{{ asset('css/all.css') }}" rel="stylesheet" />
 		<link href="{{ asset('css/montserrat.css') }}" rel="stylesheet" />
+
+		<script type ='text/javascript'>
+		$(document).ready(function(){
+
+			$('.container-fluid').hide(50);
+		  $('.sidebar-wrapper').hide(50);
+
+			$('.sidebar-wrapper').slideDown(4000);
+			$('.container-fluid').fadeIn(1000);
+		});
+		</script>

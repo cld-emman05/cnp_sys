@@ -193,6 +193,7 @@
 							</div>
 						</div>
 
+						@if(auth::user()->user_type == 2)
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
@@ -202,6 +203,7 @@
 							  </div>
 							</div>
 						</div>
+						@endif
 
 						<div class="row">
 							<div class="col-lg-6">
@@ -255,8 +257,16 @@
 					<p class="alert alert-danger"></p> -->
 					<!-- <hr> -->
 	<div class="text-center">
+		{{Form::button('Return to Orders', ['class' => 'btn btn-info btn-info btn-wd ', 'id'=>'return'])}} </i>
+
+	@if(auth::user()->user_type == 2)
 	<!-- SUBMUT BUTTON -->
 	{{Form::submit('Submit for Quotation', ['class' => 'btn btn-info btn-warning btn-wd', 'id'=>'submit'])}}
+
+	@elseif(auth::user()->user_type == 4)
+	{{Form::button('Download File', ['class' => 'btn btn-primary btn-wd', 'id'=>'download'])}}
+
+	@endif
 	</div>
 </form>
 <div class="clearfix"></div>

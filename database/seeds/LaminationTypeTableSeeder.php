@@ -13,15 +13,22 @@ class LaminationTypeTableSeeder extends Seeder
     {
         DB::table('lamination_types')->insert([
             [
-                'name' => '--', 
+                'name' => '--',
                 'description' => 'null',
 
             ],
             [
-                'name' => 'Scoring Cover Lamination', 
-                'description' => 'scoring',
-             
-            ]
+                'name' => 'Matte (1-side)',
+                'description' => '',
+            ],
+            [
+                'name' => 'Plastic Lamination',
+                'description' => '',
+            ],
+            [
+                'name' => 'UV',
+                'description' => '',
+            ],
         ]);
     }
 }

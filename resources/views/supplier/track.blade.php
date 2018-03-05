@@ -1,6 +1,6 @@
 @extends('layout.main')
 
-@section('title', "Approve Quotation")
+@section('title', "Debt Tracker")
 
 @include('headers.table')
 
@@ -8,9 +8,9 @@
   <div class="row">
     <div class="col-md-12">
       <div class="card card-chart">
-          <div class="card-header">
-          <h5 class='card-category'>Quotations</h5>
-            <h4 class="card-title">Approval</h4>
+          <div classA="card-header">
+            <h5 class='card-category'>Supplier</h5>
+            <h4 class="card-title">Debt Tracker</h4>
           </div>
 
           <!-- FORM CONTENT -->
@@ -20,25 +20,22 @@
   								<table class="table table-hover">
     								<thead>
       								<tr>
-        								<th>Quote #</th>
-        								<th>Job Title</th>
-        								<th>Agent</th>
-        								<th>Job Price</th>
-        								<th>Confirm</th>
+        								<th>Supplier</th>
+        								<th>Accumulated Credit (in PhP)</th>
+        								<th>Transaction</th>
       								</tr>
     								</thead>
 
     								<tbody>
       								<tr>
-        								<td>1</td>
-        								<td>Job Sample</td>
-        								<td><a>Crisostomo Ibarra</a></td>
-        								<td><a>PhP 30.00</a></td>
+        								<td>Dhunwell</td>
+        								<td>15000</td>
         								<td>
-        									<btn class = 'btn btn-success'>Approve</btn>
-        									<btn class = 'btn btn-danger'>Reject ()</btn>
+        									<btn class = 'btn btn-success'>Pay</btn>
+        									<btn class = 'btn btn-primary'>Details</btn>
         								</td>
       								</tr>
+
     								</tbody>
   								</table>
               </div>

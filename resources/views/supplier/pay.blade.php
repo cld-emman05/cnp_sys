@@ -1,6 +1,6 @@
 @extends('layout.main')
 
-@section('title', "Purchase Supplies")
+@section('title', "Pay Supplier")
 
 @include('headers.purchasing')
 
@@ -10,8 +10,8 @@
 					<div class="col-md-12">
 							<div class="card card-chart">
 									<div class="card-header">
-											<h5 class="card-category">Purchase Supplies</h5>
-											<h4 class="card-title">Select Supplier</h4>
+											<h5 class="card-category">Supplier</h5>
+											<h4 class="card-title">Pay Supplier</h4>
 									</div>
 
 									<div class="card-body">
@@ -40,18 +40,6 @@
                     <div class="card-body">
 
                             <div class="row">
-                            <div class="col-md-6 pr-5">
-                        			<div class="form-group">
-                        				{{ Form::label('supplier_address', 'Address') }}
-                        				{{ Form::text('supplier_address', 'Enter', [
-                        					'class' => 'form-control border-input','id' => 'ofc_supplier'
-                        				])}}
-                                <br><br>
-                        			</div>
-                        		</div>
-                            </div>
-
-                            <div class="row">
                           		<div class="col-md-6 pr-5">
                           			<div class="form-group">
                           				{{ Form::label('supplier_balance', 'Outstanding Balance (in PhP)') }}
@@ -61,24 +49,18 @@
                                   <br><br>
                           			</div>
                           		</div>
+
+                              <div class="col-md-6 pr-5">
+                          			<div class="form-group">
+                          				{{ Form::label('supplier_pay', 'Amount Paid (in PhP)') }}
+                          				{{ Form::text('supplier_pay', '', [
+                          					'class' => 'form-control border-input', 'id' => 'bal_supplier',
+                                    'placeholder' => 'Enter amount'
+                          				])}}
+                                  <br><br>
+                          			</div>
+                          		</div>
                               </div>
-
-                              <div class="row">
-                            		<div class="col-md-2 pr-1">
-                            			<div class="form-group">
-                            				{{ Form::label('loan_status', 'Loan Status') }}
-
-																		<div class="alert alert-danger">
-                                    <span><b> Unavailable </b></span>
-																		</div>
-
-																		<div class="alert alert-success">
-                                    <span><b> Available </b></span>
-																		</div>
-
-																	</div>
-                            		</div>
-                        </div>
 
     								</div>
     							</div>

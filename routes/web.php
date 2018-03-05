@@ -11,16 +11,29 @@
 |
 */
 
+// Registration
+Route::get('/customer/register', function () {
+    return view('customer.register');
+});
+
+Route::get('/employee/register', function () {
+    return view('employee.register');
+});
+
+Route::get('/supplier/register', function () {
+    return view('supplier.register');
+});
+
 // User Dashviards
 Route::get('/customer', function () {
     return view('dashboard.customer');
 });
 
-Route::get('/agent', function () {
+Route::get('/sales', function () {
     return view('dashboard.agent');
 });
 
-Route::get('/admin', function () {
+Route::get('/administrator', function () {
     return view('dashboard.admin');
 });
 
@@ -30,6 +43,10 @@ Route::get('/pre-press', function () {
 
 Route::get('/purchasing', function () {
     return view('dashboard.purchasing');
+});
+
+Route::get('/finance', function () {
+    return view('dashboard.finance');
 });
 
 // Orders Function
@@ -54,6 +71,10 @@ Route::get('/order/update-status', function () {
     return view('order.update-status');
 });
 
+Route::get('/order/schedule', function () {
+    return view('order.schedule');
+});
+
 //Quotations Function
 
 Route::get('/quotation/create', function () {
@@ -64,6 +85,10 @@ Route::get('/quotation/approve', function () {
     return view('quotation.approve');
 });
 
+Route::get('/quotation/haggle', function () {
+    return view('quotation.haggle');
+});
+
 //Purchase Function
 
 Route::get('/purchase/create', function () {
@@ -72,6 +97,16 @@ Route::get('/purchase/create', function () {
 
 Route::get('/purchase/compute', function () {
     return view('purchase.compute');
+});
+
+// Supplier Functions
+
+Route::get('/supplier/pay', function () {
+    return view('supplier.pay');
+});
+
+Route::get('/supplier/track', function () {
+    return view('supplier.track');
 });
 
 // About Functions
@@ -86,3 +121,5 @@ Route::get('/', function () {
 Route::get('/contact-us', function () {
     return view('about.contact');
 });
+
+Auth::routes();

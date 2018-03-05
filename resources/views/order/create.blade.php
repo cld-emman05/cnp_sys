@@ -55,7 +55,7 @@
 							<div class="row">
 								<div class="col-md-6 pr-5">
 									<div class="form-group">
-										{{ Form::label('job_name', 'Job Type:') }}
+										{{ Form::label('job_name', 'Job Name:') }}
 										{{ Form::text('job_name', '', [
 											'class' => 'form-control border-input',
 											'placeholder' => 'Enter'
@@ -70,7 +70,14 @@
 										{{ Form::text('jobtype', '', ['class' => 'form-control border-input', 'placeholder' => 'Enter','id'=>'jobtype'])}} -->
 										{{ Form::label('jobtype', 'Job Type:') }}
 										<select class="form-control" id="jobtype" name="jobtype">
-										<option value="1"> -- </option>
+										<option value="0"> -- </option>
+										<option value="2"> Poster </option>
+										<option value="3"> Book </option>
+										<option value="4"> Magazine </option>
+										<option value="5"> Yearbook </option>
+										<option value="6"> Brochure </option>
+										<option value="7"> Calendar </option>
+										<option value="8"> Customized </option>
 										</select>
 									</div>
 								</div>
@@ -113,7 +120,8 @@
 										<!-- SIZE -->
 										{{ Form::label('size', 'Size') }}
 										<select class="form-control" id="size" name="size">
-										<option value="1"> -- </option>
+										<option value="0"> -- </option>
+										<option value="2"> Letter (8.5 x 11) </option>
 										</select>
 									</div>
 								</div>
@@ -131,7 +139,11 @@
 										<!-- COVER PAPER -->
 										{{ Form::label('cover_paper', 'Paper Type') }}
 										<select class="form-control" id="cover_paper" name="cover_paper">
-											<option value="1"> -- </option>
+											<option value="0"> -- </option>
+											<option value="2"> C2S140 </option>
+											<option value="3"> C2S160 </option>
+											<option value="4"> C2S180 </option>
+											<option value="5"> C2S220 </option>
 										</select>
 									</div>
 								</div>
@@ -141,6 +153,7 @@
 									<!-- INSIDE PAPER -->
 									{{ Form::label('cover_color', 'Paper Color') }}
 									<select class="form-control" id="cover_color" name="cover_color">
+									<option value="0"> -- </option>
 									<option value="1"> Black and White </option>
 									<option value="2"> Colored </option>
 									</select>
@@ -160,7 +173,13 @@
 									<!-- COVER PAPER -->
 									{{ Form::label('inside_paper', 'Paper Type') }}
 									<select class="form-control" id="cover_paper" name="cover_paper">
-									<option value="1"> -- </option>
+									<option value="0"> -- </option>
+									<option value="1"> BP50 </option>
+									<option value="2"> BP60 </option>
+									<option value="3"> BP70 </option>
+									<option value="4"> C2S70 </option>
+									<option value="5"> C2S80 </option>
+									<option value="6"> C2S100 </option>
 									</select>
 								</div>
 							</div>
@@ -170,6 +189,7 @@
 								<!-- INSIDE PAPER -->
 								{{ Form::label('inside_color', 'Paper Color') }}
 								<select class="form-control" id="cover_color" name="cover_color">
+								<option value="0"> -- </option>
 								<option value="1"> Black and White </option>
 								<option value="2"> Colored </option>
 								</select>
@@ -182,7 +202,8 @@
 								<div class="form-group">
 									<!-- JOB SAMPLE -->
 									{{ Form::label('job_sample', 'Job Sample') }}
-									{{ Form::file('myFile') }}
+									<input type="file" name="job_sample" />
+									<input class = 'btn btn-primary' type="submit" name="submit" value="Upload File" />
 								</div>
 							</div>
 						</div>
@@ -193,7 +214,11 @@
 								<!-- LAMINATION -->
 									{{ Form::label('lamination', 'Lamination') }}
 									<select class="form-control" id="lamination" name="lamination">
-									<option value="1"> -- </option>
+									<option value="0"> -- </option>
+									<option value="1"> Matte (1-sided) </option>
+									<option value="2"> Matte (2-sided) </option>
+									<option value="3"> Plastic Lamination </option>
+									<option value="4"> UV </option>
 									</select>
 								</div>
 						</div>
@@ -203,7 +228,10 @@
 							<!-- BINDING -->
 							{{ Form::label('binding', 'Binding') }}
 							<select class="form-control" id="binding" name="binding">
-								<option value="1"> -- </option>
+								<option value="0"> -- </option>
+								<option value="1"> Perfect </option>
+								<option value="2"> Wire-O </option>
+								<option value="2"> Saddle Stitch </option>
 							</select>
 						</div>
 					</div>
@@ -215,7 +243,7 @@
 							<div class="form-group">
 								<!-- DATE DUE -->
 								{{ Form::label('date_due', 'Date Due') }}
-								{{ Form::date('date_due', \Carbon\Carbon::now(), ['class' => 'form-control border-input','id'=>'datedue'])}}
+								{{ Form::date('date_due', '', ['class' => 'form-control border-input','id'=>'datedue'])}}
 							</div>
 						</div>
 					</div>

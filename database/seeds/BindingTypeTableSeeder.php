@@ -13,21 +13,21 @@ class BindingTypeTableSeeder extends Seeder
     {
         DB::table('binding_types')->insert([
             [
-                'name' => '--', 
+                'name' => '--',
                 'description' => 'null',
             ],
             [
-                'name' => 'Perfect Bound', 
-                'description' => 'perfect',
+                'name' => 'Perfect',
+                'description' => '',
             ],
             [
-                'name' => 'Hard Bound', 
-                'description' => 'hard',
+                'name' => 'Wire-O',
+                'description' => '',
             ],
             [
-                'name' => 'Soft Bound', 
-                'description' => 'soft',
-  
+                'name' => 'Saddle Stitch',
+                'description' => '',
+
             ]
         ]);
     }

@@ -175,23 +175,38 @@
                           </div>
                         </div>
 
-                        <div class="col-md-3 pr-1">
-                        <div class="form-group">
-                        <!-- QUANTITY -->
-                          {{ Form::label('supply_price', 'Amount (in PhP)') }}
-                            <div class="container">
-                              <div class="count-input space-bottom">
-																{{ Form::text('supply_price', '', [
-																	'class' => 'form-control border-input',
-																	'readonly placeholder'
-																])}}
-                            </div>
-                          </div>
-                        </div>
-                        </div>
+												<div class = 'row'>
+													<div class = 'col-md-6'>
+														<label><b>Computation</b></label>
+													</div>
 
-                        <div class="container-fluid">
-                          {{Form::submit('Post', ['class' => 'btn btn-success btn-fill btn-wd pull-right', 'id' => 'post-quote'])}}
+										<div class = 'row'>
+											<div class = 'col-md-6 pl-1'>
+												<div class = 'form-group'>
+													{{ Form::label('ream_count', 'Number of Reams') }}
+																			{{ Form::text('ream_count', '', [
+																			'class' => 'form-control border-input',
+																			'readonly placeholder'
+																			])}}
+										</div>
+									</div>
+
+									<div class="col-md-6 pr-1">
+									<div class="form-group">
+									<!-- QUANTITY -->
+										{{ Form::label('supply_price', 'Amount (in PhP)') }}
+										{{ Form::text('supply_price', '', [
+														'class' => 'form-control border-input',
+														'readonly placeholder'
+													])}}
+									</div>
+									</div>
+								</div>
+							</div>
+
+
+                        <div class="container-fluid text-center">
+                          {{Form::submit('Post', ['class' => 'btn btn-success btn-fill btn-wd pull-right', 'id' => 'post-calculation'])}}
                         </form>
                         <button class="btn btn-info btn-wd btn-fill pull-left" id='calculate'>Compute</button>
                       </div>

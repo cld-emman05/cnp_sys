@@ -1,4 +1,3 @@
-<!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-transparent  navbar-absolute bg-primary fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-wrapper">
@@ -11,11 +10,13 @@
                         </div>
                         <a class="navbar-brand">@yield('title')</a>
                     </div>
+
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                     </button>
+
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
                         <form>
                             <div class="input-group no-border">
@@ -25,15 +26,13 @@
                                 </span>
                             </div>
                         </form>
+
                         <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
-                                    <i class="now-ui-icons media-2_sound-wave"></i>
-                                    <p>
-                                        <span class="d-lg-none d-md-block">Stats</span>
-                                    </p>
-                                </a>
-                            </li>
+                          @guest
+                          <li><a class="nav-link" href="{{ route('login') }}">Login</a></li>
+                          <li><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+
+                          @else
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="now-ui-icons location_world"></i>
@@ -42,13 +41,10 @@
                                     </p>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="/customer">Customer</a>
-                                    <a class="dropdown-item" href="/agent">Sales Agent</a>
-                                    <a class="dropdown-item" href="/admin">Administrator</a>
-                                    <a class="dropdown-item" href="/pre-press">Pre-press</a>
-                                    <a class="dropdown-item" href="/purchasing">Purchasing</a>
+                                    <a class="dropdown-item" href="#">Notification 1</a>
                                 </div>
                             </li>
+
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#pablo" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="now-ui-icons users_single-02"></i>
@@ -58,24 +54,18 @@
                                 </a>
                                 <div class = "dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                     <a class = 'dropdown-item' href = '#'> Profile </a>
-                                    <a class = 'dropdown-item' href = '#'> Logout </a>
-                                    <hr>
-                                  <div class="col-md-12 pr-1">
-                              			<div class="form-group">
-                                    {{ Form::label('user_name', 'Username') }}
-                      							{{ Form::text('User Name', '', ['class' => 'form-control border-input col-lg-6', 'placeholder' => 'username', 'id'=>'user_name'])}}
-                                  </div>
-                                </div>
-                                    <div class="col-md-12 pr-1">
-                                			<div class="form-group">
-                                    {{ Form::label('password', 'Password') }}
-                      							{{ Form::password('', ['class' => 'form-control border-input col-lg-6', 'placeholder' => 'password', 'id'=>'password'])}}
-                                </div>
-                              </div>
+                                    <a class = 'dropdown-item' href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"> Logout </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
                             </div>
                             </li>
                         </ul>
                     </div>
+                    @endguest
                 </div>
             </nav>
             <!-- End Navbar -->
